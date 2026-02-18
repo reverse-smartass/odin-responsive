@@ -1,0 +1,13 @@
+.title{
+    font-size: 30px;
+    font-weight: 500
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    padding: 45px;
+}
