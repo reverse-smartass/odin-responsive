@@ -1,5 +1,5 @@
 .title {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 500;
 }
 
@@ -9,17 +9,35 @@ body {
   background-color: honeydew;
 }
 
-header {
-  padding: 10vw;
+header,
+main {
+  padding: 7.5vw;
+}
+
+footer{
+    padding: 3vw 7.5vw ;
+}
+
+header,
+.main-content, footer {
   display: flex;
-  gap:30px;
+  gap: 30px;
   align-items: center;
 }
 
+footer{
+    background-color: rgb(0, 208, 255);
+}
+
+.main-content{
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 .header-content {
- background-color: honeydew;
-    padding: 30px 20px;
+  background-color: honeydew;
+  padding: 30px 20px;
+  border-radius: 30px;
 }
 
 .background-svg {
@@ -29,7 +47,7 @@ header {
   z-index: 1; /* Lower number = back */
 }
 
-.content {
+.header {
   position: relative; /* Relative also works with z-index */
   z-index: 2; /* Higher number = front */
   text-align: justify;
@@ -43,38 +61,90 @@ header {
   gap: 20px;
 }
 
-i{
-    font-size: 30px;
+i {
+  font-size: 30px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 i:hover {
-    opacity: 0.4;
-    cursor: pointer;
+  opacity: 0.4;
+  cursor: pointer;
 }
 
-@media (max-width: 750px) {
-  .content img {
-    width: 90vw;
-    height: auto;
-  }
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
-  header {
-    flex-direction: column;
-  }
+  border: 2px solid black;
+}
+
+.project-name {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  align-items: center;
+  padding: 10px 25px;
+  gap:20px;
+}
+
+.project-description, .contact-information, .about-me{
+  font-family:
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  padding: 10px 25px 40px 25px;
 }
 
 @media (max-width: 1000px) {
-  .content img {
-    width: 50vw;
+  .header img , .footer img{
+    width: 43vw;
+  }
+
+  .project {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 750px) {
+  .header img,
+   .footer img {
+    width: 85vw;
+  }
+
+  .project{
+    width: 80vw;
+  }
+
+  header, footer {
+    flex-direction: column;
+  }
+  @media (max-width: 260px){
+    .project-name{
+      flex-direction: column;
+    }
   }
 }
 
 @media (min-width: 1001px) {
-  .content img {
-    width: 30vw;
+  .header img , .footer img{
+    width: 35vw;
   }
+
+  .project {
+    width: 25vw;
+  }
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+}
+
+.footer{
+    color: honeydew;
+    justify-content: center;
+    gap: 10vw;
 }
